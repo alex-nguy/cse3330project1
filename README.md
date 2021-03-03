@@ -7,7 +7,7 @@ the tables.
 
 #### Requirements
 1. Create the following tables specified in the textbook(Figure 3.2): EMPLOYEE,
-DEPARTMENT, PROJECT, WORKS_ON, DEPT_LOCATIONS.
+DEPARTMENT, PROJECT, WORKS_ON, DEPT_LOCATIONS. <br/><img src="https://github.com/amusealex/cse3330project1/blob/main/images/Figure3-2.PNG"/>
 2. Load the records that will be provided to you into each of the tables that you created.
 3. Write SQL queries OR use a simple Web interfaces to get the results of the following
 queries:
