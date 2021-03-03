@@ -9,6 +9,7 @@ the tables.
 This project is created using:
 * [Python3](https://www.python.org/)
 * [SQLite3](https://www.sqlite.org/index.html)
+* [DB Browswer for SQLite](https://sqlitebrowser.org/)
 
 ## Usage
 When ran the program will prompt the user the following:
