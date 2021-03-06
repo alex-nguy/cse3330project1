@@ -49,16 +49,64 @@ When ran with test cases:
 Should output the following:
 ```
   Enter department to find all employees and salaries: Research
-  [('Franklin', 'T', 'Wong', 40000), ('John', 'B', 'Smith', 30000), ('Ramesh', 'K', 'Narayan', 38000), ('Joyce', 'A', 'English', 25000), ('Michael', 'A', 'Morgan', 73500), ('Andrea', 'M', 'Sondrini', 65000), ('James', 'U', 'Miller', 75000)]
+  Employee Name             | Employee Salary
+  Franklin T. Wong          |     $40000
+  John B. Smith             |     $30000
+  Ramesh K. Narayan         |     $38000
+  Joyce A. English          |     $25000
+  Michael A. Morgan         |     $73500
+  Andrea M. Sondrini        |     $65000
+  James U. Miller           |     $75000
+
   Find an employee's project name and their salary.
   Enter first name: Alex
   Enter last name: Freed
-  [('InkjetPrinters', 40)]
+  Alex Freed's Projects     | Hours Spent
+  InkjetPrinters            | 40 Hours
+
   Enter a department to find their total salary: Administration
-  [(330500,)]
+  Department                | Total Salary
+  Administration            |  $330500
+
   Department Population:
-  [('Sales', 18), ('Software', 16), ('Hardware', 14), ('HR', 7), ('Research', 7), ('Administration', 6), ('Headquarters', 2), ('Networking', 1)]
+  Department                | Total Employees
+  Sales                     |     $18
+  Software                  |     $16
+  Hardware                  |     $14
+  HR                        |     $7
+  Research                  |     $7
+  Administration            |     $6
+  Headquarters              |     $2
+  Networking                |     $1
+
   Employee Supervisors:
-  [('Alex', 'Freed', 7), ('Bob', 'Bender', 4), ('Jared', 'James', 4), ('Roy', 'Lewallen', 4), ('Evan', 'Wallis', 3), ('Franklin', 'Wong', 3), ('James', 'Borg', 
-  3), ('John', 'James', 3), ('Kate', 'King', 3), ('Jennifer', 'Wallace', 2), ('Josh', 'Zell', 2), ('Juan', 'Linda', 2), ('Lyle', 'Leslie', 2), ('Nandita', 'Ball', 2), ('Red', 'Bacher', 2), ('Sammy', 'Hall', 2), ('Ahmad', 'Jabbar', 1), ('Alec', 'Best', 1), ('Billie', 'King', 1), ('Bonnie', 'Bays', 1), ('Carl', 'Reedy', 1), ('Gerald', 'Small', 1), ('Jill', 'Jarvis', 1), ('John', 'Smith', 1), ('John', 'Ed', 1), ('Kim', 'Grace', 1), ('Naveen', 'Drew', 1), ('Sam', 'Snedden', 1)]
+  Supervisors               | Employees Supervised
+  Alex Freed                | 7 Employees
+  Bob Bender                | 4 Employees
+  Jared James               | 4 Employees
+  Roy Lewallen              | 4 Employees
+  Evan Wallis               | 3 Employees
+  Franklin Wong             | 3 Employees
+  James Borg                | 3 Employees
+  John James                | 3 Employees
+  Kate King                 | 3 Employees
+  Jennifer Wallace          | 2 Employees
+  Josh Zell                 | 2 Employees
+  Juan Linda                | 2 Employees
+  Lyle Leslie               | 2 Employees
+  Nandita Ball              | 2 Employees
+  Red Bacher                | 2 Employees
+  Sammy Hall                | 2 Employees
+  Ahmad Jabbar              | 1 Employees
+  Alec Best                 | 1 Employees
+  Billie King               | 1 Employees
+  Bonnie Bays               | 1 Employees
+  Carl Reedy                | 1 Employees
+  Gerald Small              | 1 Employees
+  Jill Jarvis               | 1 Employees
+  John Smith                | 1 Employees
+  John Ed                   | 1 Employees
+  Kim Grace                 | 1 Employees
+  Naveen Drew               | 1 Employees
+  Sam Snedden               | 1 Employees
 ```

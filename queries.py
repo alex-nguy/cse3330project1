@@ -34,29 +34,41 @@ for x in worksonfile:
 # Requirement 4
 myDname = input("Enter department to find all employees and salaries: ")
 c.execute("SELECT EMPLOYEE.Fname, EMPLOYEE.Minit, EMPLOYEE.Lname, EMPLOYEE.Salary FROM DEPARTMENT, EMPLOYEE WHERE EMPLOYEE.Dno = DEPARTMENT.Dnumber AND DEPARTMENT.Dname =:Dname", {'Dname': myDname})
-print(c.fetchall())
+print(f'{"Employee Name":25} | {"Employee Salary"}')
+for i in c.fetchall():
+    name = i[0] + " " + i[1] + ". " + i[2]
+    print(f'{name:25} | \t${i[3]}')
 
 # Requirement 5
-print("Find an employee's project name and their salary.")
+print("\nFind an employee's project name and their salary.")
 myFname = input("Enter first name: ")
 myLname = input("Enter last name: ")
 c.execute("SELECT PROJECT.Pname, WORKS_ON.Hours FROM PROJECT, WORKS_ON, EMPLOYEE WHERE EMPLOYEE.Ssn = WORKS_ON.Essn AND (EMPLOYEE.Fname = :Fname and EMPLOYEE.Lname = :Lname) AND WORKS_ON.Pno = PROJECT.Pnumber", {'Fname': myFname, 'Lname': myLname})
-print(c.fetchall())
+myEmp = myFname + " " + myLname + "'s Projects"
+print(f'{myEmp:25} | {"Hours Spent"}')
+for i in c.fetchall():
+    print(f'{i[0]:25} | {i[1]} Hours')
 
 # Requirement 6
-myDep = input("Enter a department to find their total salary: ")
+myDep = input("\nEnter a department to find their total salary: ")
 c.execute("SELECT sum(salary) FROM EMPLOYEE, DEPARTMENT WHERE Dno = Dnumber and Dname = :Dname", {'Dname': myDep})
-print(c.fetchall())
+print(f'{"Department":25} | {"Total Salary"}')
+mySal = " $" + str(c.fetchall()[0][0])
+print(f'{myDep:25} | {mySal}')
 
 # Requirement 7
-print("Department Population: ")
+print("\nDepartment Population: ")
 c.execute("SELECT DEPARTMENT.Dname, COUNT(*) FROM EMPLOYEE, DEPARTMENT WHERE EMPLOYEE.Dno = DEPARTMENT.Dnumber GROUP BY EMPLOYEE.Dno ORDER BY COUNT(*) DESC")
-print(c.fetchall())
+print(f'{"Department":25} | {"Total Employees"}')
+for i in c.fetchall():
+    print(f'{i[0]:25} | \t${i[1]}')
 
 # Requirement 8
-print("Employee Supervisors: ")
+print("\nEmployee Supervisors: ")
 c.execute("SELECT S.Fname, S.Lname, COUNT(*) FROM EMPLOYEE AS S, EMPLOYEE AS E WHERE S.Ssn = E.Super_ssn GROUP BY E.Super_ssn ORDER BY COUNT(*) DESC, S.Fname ASC")
-print(c.fetchall())
+print(f'{"Supervisors":25} | {"Employees Supervised"}')
+for i in c.fetchall():
+    print(f'{i[0]+" "+i[1]:25} | {i[2]} Employees')
 
 c.execute("DELETE FROM DEPARTMENT")
 c.execute("DELETE FROM DEPT_LOCATIONS")
