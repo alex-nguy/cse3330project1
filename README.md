@@ -1,8 +1,8 @@
 # CSE3330 Project 1
-Group Members: Alexander Nguyen, Myles Guiam, Andy Vu, An Nguyen
-Myles Guiam: Created each of the Tables
-Andy Vu and An Nguyen: Populated the tables with INSERT statements
-Alexander Nguyen: Queried the database with the SELECT statements
+Group Members: Alexander Nguyen, Myles Guiam, Andy Vu, An Nguyen<br/>
+Myles Guiam: Created each of the Tables<br/>
+Andy Vu and An Nguyen: Populated the tables with INSERT statements<br/>
+Alexander Nguyen: Queried the database with the SELECT statements<br/>
 
 ## Motivation
 In this project, the group started on how to use a relational DBMS. We used SQLite for creating tables, populating them with data, and querying
